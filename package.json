@@ -1,0 +1,24 @@
+{
+  "name": "zipkin-proxy",
+  "version": "0.0.1",
+  "description": "Reroute all request, but with zipkin traces attached",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'Okay, lets go'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DanielMSchmidt/zipkin-proxy.git"
+  },
+  "keywords": [
+    "zipkin",
+    "tracing",
+    "proxy"
+  ],
+  "author": "DanielMSchmidt <danielmschmidt92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielMSchmidt/zipkin-proxy/issues"
+  },
+  "homepage": "https://github.com/DanielMSchmidt/zipkin-proxy#readme"
+}
