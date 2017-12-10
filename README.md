@@ -1,4 +1,4 @@
-# Zipkin Proxy
+# Zipkin Proxy [![](https://images.microbadger.com/badges/image/danielmschmidt/zipkin-proxy.svg)](https://microbadger.com/images/danielmschmidt/zipkin-proxy "Get your own image badge on microbadger.com")
 
 Reroute all requests to the destination with zipkin tracing embedded
 
