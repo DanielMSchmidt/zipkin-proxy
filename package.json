@@ -27,5 +27,8 @@
     "zipkin": "^0.11.1",
     "zipkin-instrumentation-express": "^0.11.1",
     "zipkin-transport-http": "^0.11.1"
+  },
+  "devDependencies": {
+    "node-fetch": "^1.7.3"
   }
 }
