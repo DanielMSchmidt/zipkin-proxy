@@ -6,6 +6,8 @@ const zipkinMiddleware = require('zipkin-instrumentation-express').expressMiddle
 const fetch = require('node-fetch');
 
 const localServiceName = process.env.ZIPKIN_SERVICE_NAME || 'proxy';
+const port = process.env.PORT || 80;
+
 const ctxImpl = new ExplicitContext();
 const recorder = new BatchRecorder({
   logger: new HttpLogger({
@@ -33,19 +35,19 @@ app.use(function (req, res, next) {
     res.status(200);
     res.end();
   } else {
-    console.log('LETS DO THIS!');
     fetch(process.env.ENDPOINT + '/' + req.originalUrl, {
       method: req.method,
     }).then(response => {
-      response.json().then(body => {
-        console.log('R', body);
+      response.text().then(body => {
         res.status(response.status);
-        res.send(response.body);
+        res.send(body);
   
         res.end();
-      });
+      }, err => {
+        console.error("Error occured", err)
+      })
     }, error => {
-      console.log('ERR', error);
+      console.error('ERR', error);
       // res.send(error);
       res.status(200);
       res.end();
@@ -53,4 +55,4 @@ app.use(function (req, res, next) {
   }
 });
 
-app.listen(80, () => console.log('Starting server on port 80'));
+app.listen(port, () => console.log(`Starting server on port ${port}`));

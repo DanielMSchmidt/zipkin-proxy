@@ -7,6 +7,7 @@ Reroute all requests to the destination with zipkin tracing embedded
 - `ZIPKIN_ENDPOINT`: your zipkin instance to trace to
 - `ZIPKIN_SERVICE_NAME`: the name of the service (default "proxy")
 - `ENDPOINT`: the endpoint to which the requests shall be routet
+- `PORT`: port the server should be started on
 
 ## Start
 
