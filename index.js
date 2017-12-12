@@ -53,7 +53,4 @@ app.use(function (req, res, next) {
   }
 });
 
-
-// app.get('/', proxy({ target: process.env.ENDPOINT, logLevel: 'debug'}));
-
-app.listen(4444, () => console.log('Starting server on port 80'));
+app.listen(80, () => console.log('Starting server on port 80'));
