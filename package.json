@@ -4,7 +4,8 @@
   "description": "Reroute all request, but with zipkin traces attached",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,15 @@
   },
   "homepage": "https://github.com/DanielMSchmidt/zipkin-proxy#readme",
   "dependencies": {
-    "express": "^4.16.2",
     "http-proxy-middleware": "^0.17.4",
     "zipkin": "^0.11.1",
     "zipkin-instrumentation-express": "^0.11.1",
     "zipkin-transport-http": "^0.11.1"
   },
   "devDependencies": {
-    "node-fetch": "^1.7.3"
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
+    "sleep": "^5.1.1"
   }
 }
